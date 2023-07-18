@@ -39,23 +39,22 @@
 |-|-|-|
 | user | references | null: false |
 | item | references | null: false |
-| address | references | null: false |
 
 ### Association
 - belongs_to :item
 - belongs_to :user
 - has_one :address
 
-## addresssテーブル
+## addressesテーブル
 | Column | Type | Option |
 |-|-|-|
 | post_code | string | null: false |
 | prefecture_id | integer | null: false |
 | municipality | string | null: false |
 | address | string | null: false |
-| building | string | null: false |
+| building | string |  |
 | telephone_number | string | null: false |
-| purchase history | references | null: false, foreign_key: true|
+| order | references | null: false, foreign_key: true|
 
 ### Association
 - belongs_to :order

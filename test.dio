@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="khbUoKgWafEG8JU5mc2e" name="ページ1">
-        <mxGraphModel dx="839" dy="2973" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="808" dy="2973" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -28,7 +28,7 @@
                     <mxGeometry x="270" y="-2035" width="180" height="260" as="geometry"/>
                 </mxCell>
                 <mxCell id="35GNIojbanbBT0S61Yvv-157" value="&amp;nbsp;&lt;br&gt;&lt;b&gt;addresssテーブル&lt;/b&gt;&lt;br&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;post_code&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;prefecture_id&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;municipality_id&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;address&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;building&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;telephone_number&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;overflow=fill;rounded=1;labelBackgroundColor=none;labelBorderColor=default;fontSize=15;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="510" y="-1980" width="180" height="205" as="geometry"/>
+                    <mxGeometry x="530" y="-1990" width="180" height="205" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
