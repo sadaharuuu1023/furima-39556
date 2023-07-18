@@ -3,8 +3,8 @@ class CreateOrders < ActiveRecord::Migration[7.0]
     create_table :orders do |t|
 
       t.timestamps
-      t.string :user,   null: false
-      t.string :item,   null: false
+      t.references :user,   null: false, foreign_key: true
+      t.references :item,   null: false, foreign_key: true
     end
   end
 end
