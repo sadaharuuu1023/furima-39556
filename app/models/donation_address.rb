@@ -1,6 +1,6 @@
 class DonationAddress
   include ActiveModel::Model 
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :municipality, :address, :building, :telephone_number
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :municipality, :address, :building, :telephone_number, :token
 
   validates :user_id, presence: true
   validates :item_id, presence: true
@@ -10,6 +10,7 @@ class DonationAddress
   validates :address, presence: true
   # 建物名は任意
   validates :telephone_number, presence: true
+  validates :token, presence: true
 
 
   def save
