@@ -1,18 +1,16 @@
 class OrdersController < ApplicationController
-  before_action :set_public_key, only: [:index, :create]
+  before_action :set_public_key
+  before_action :authenticate_user!
+  before_action :set_orders
+  before_action :move_to_index
 
   def index
     @order = DonationAddress.new
-    @item = Item.find(params[:item_id])
-  end
-
-  def new
   end
 
 
   def create
     @order = DonationAddress.new(order_params)
-    @item = Item.find(params[:item_id])
     if @order.valid?
       pay_item
       @order.save
@@ -40,5 +38,14 @@ class OrdersController < ApplicationController
       gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
     end
 
+    def set_orders
+      @item = Item.find(params[:item_id])
+    end
+
+    def move_to_index
+      if current_user.id == @item.user_id
+        redirect_to items_path
+      end
+    end
 end
 
