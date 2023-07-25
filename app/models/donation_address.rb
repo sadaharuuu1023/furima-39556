@@ -11,6 +11,7 @@ class DonationAddress
   # 建物名は任意
   validates :telephone_number, presence: true
   validates :token, presence: true
+  validates :prefecture_id, numericality: {other_than: 0, message: "can't be blank"}
 
 
   def save

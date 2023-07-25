@@ -5,6 +5,9 @@ class OrdersController < ApplicationController
   before_action :move_to_index
 
   def index
+    if @item.order.present?
+      return redirect_to root_path
+    end
     @order = DonationAddress.new
   end
 
