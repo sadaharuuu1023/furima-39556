@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_073511) do
     t.integer "prefecture_id", null: false
     t.string "municipality", null: false
     t.string "address", null: false
-    t.string "building", null: false
+    t.string "building"
     t.string "telephone_number", null: false
     t.bigint "order_id", null: false
     t.index ["order_id"], name: "index_addresses_on_order_id"

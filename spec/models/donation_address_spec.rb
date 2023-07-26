@@ -4,6 +4,7 @@ RSpec.describe DonationAddress, type: :model do
     before do
       @user = FactoryBot.create(:user)
       @item = FactoryBot.create(:item)
+      current_user = FactoryBot.create(:user)
       @donation_address = FactoryBot.build(:donation_address, user_id: @user.id, item_id: @item.id)
     end
     
@@ -62,6 +63,22 @@ RSpec.describe DonationAddress, type: :model do
         @donation_address.item_id = nil
         @donation_address.valid?
         expect(@donation_address.errors.full_messages).to include("Item can't be blank")
+      end
+
+      it '電話番号にが全角数字が含まれると保存できないこと' do
+        @donation_address.telephone_number = '123００678901'
+        @donation_address.valid?
+        expect(@donation_address.errors.full_messages).to include("Telephone number Invalid. Please enter only digits in half-width characters.")
+      end
+      it '電話番号が9桁以下では保存できないこと' do
+        @donation_address.telephone_number = '123456789'
+        @donation_address.valid?
+        expect(@donation_address.errors.full_messages).to include("Telephone number Invalid. Please enter only digits in half-width characters.")
+      end
+      it '電話番号が12桁以上では保存できないこと' do
+        @donation_address.telephone_number = '1234567890123'
+        @donation_address.valid?
+        expect(@donation_address.errors.full_messages).to include("Telephone number Invalid. Please enter only digits in half-width characters.")
       end
     end
   end
