@@ -11,8 +11,6 @@ class DonationAddress
   validates :address
   # 建物名は任意
   validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: 'Invalid. Please enter only digits in half-width characters.'}
-  
-
   # validates :telephone_number, format: { with: /\A\d{10,11}\z/, message: 'Invalid. Please enter only digits in half-width characters.' }
   validates :token
   end
