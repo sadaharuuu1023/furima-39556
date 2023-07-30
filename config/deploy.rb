@@ -1,15 +1,20 @@
-# config valid for current version and patch releases of Capistrano
+# capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 lock '3.17.3'
 
+# Capistranoのログの表示に利用する
 set :application, "furima-39556"
+
+# どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:sadaharuuu1023/furima-39556.git'
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# バージョンが変わっても共通で参照するディレクトリを指定
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
-# Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :branch, 'main'
+set :rbenv_type, :user
 set :rbenv_ruby, '3.2.0'
+
+# どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
                                   keys: ['~/.ssh/sadaharuuu.key.pem']
 
