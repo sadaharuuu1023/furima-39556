@@ -2,7 +2,7 @@
 lock '3.17.3'
 
 set :application, "furima-39556"
-set :repo_url, 'git@github.com:sadaharuuu1023/furima-39556.git'
+set :repo_url,  'git@github.com:sadaharuuu1023/furima-39556.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
